@@ -1,0 +1,14 @@
+<!-- Update: 2020-02-03 --> 
+<!-- urdf --> 
+<robot name="pioneer">
+
+    <link name="map"/>
+    <link name="laser"/>
+
+    <joint name="robot2laser" type="fixed">
+        <parent link="map"/>
+        <child link="laser"/>
+        <origin xyz="0.3 0 -0.2" rpy="0 0 0" />
+    </joint>
+
+</robot>

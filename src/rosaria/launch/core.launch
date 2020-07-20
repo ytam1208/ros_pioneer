@@ -1,0 +1,18 @@
+<launch>
+<node name="joywing" pkg="joywing" type="joywing">
+</node>
+<node pkg="joy" type="joy_node" name="joy" >
+<param name="dev" type="string" value="/dev/input/js0" />
+<param name="deadzone" value="0.2" /> 
+</node> 
+
+<node name="RosAria"          pkg="rosaria"  type="RosAria">
+</node>
+
+<include file="$(find sick_tim)/launch/sick_tim571_2050101.launch"/>
+
+<node pkg="laser_tracker" type="laser_tracker" name="laser_tracker" output="screen">
+</node>
+
+</launch>
+
